@@ -19,13 +19,13 @@ app.use(express.json());
 //database connection
 mongoose.connect('mongodb://localhost:27017/googlekeepDB',{useNewUrlParser:true,useUnifiedTopology:true});
 
-
-//routers
+//configuration of cross origin
 app.use(cors({
   origin:"*",
   methods:'GET,POST,PUT,DELETE,PATCH',
 }));
 
+//routers
 app.use('/',router);
 
 
