@@ -22,7 +22,6 @@ mongoose.connect('mongodb+srv://admin-abhi:admin-abhi@cluster0.dmwil.mongodb.net
 //configuration of cross origin
 app.use(cors({
   origin:"*",
-  methods:'GET,POST,PUT,DELETE,PATCH',
 }));
 
 //routers

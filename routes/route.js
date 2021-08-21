@@ -40,6 +40,10 @@ router.route('/')
             res.send(err);
         }
     });
+})
+
+.all((req, res) => {
+    res.status(405).send();
 });
 
 //request for specific id
@@ -99,6 +103,10 @@ router.route("/:id")
            res.send(err);
        }
     });
+})
+
+.all((req, res) => {
+    res.status(405).send();
 });
 
 
