@@ -40,6 +40,10 @@ router.route('/')
             res.send(err);
         }
     });
+})
+
+.all((req, res) => {
+    res.status(405).send();
 });
 
 //request for specific id
@@ -99,11 +103,15 @@ router.route("/:id")
            res.send(err);
        }
     });
+})
+
+.all((req, res) => {
+    res.status(405).send();
 });
 
-router.all('/*', (req,res) => { res.status(405), 
-    res.json({'status':405,
-              'message':req.method + ' not allowed on this route'}) 
- });
+// router.all('/*', (req,res) => { res.status(405), 
+//     res.json({'status':405,
+//               'message':req.method + ' not allowed on this route'}) 
+//  });
 
 module.exports=router;
