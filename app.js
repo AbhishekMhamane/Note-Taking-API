@@ -20,9 +20,7 @@ app.use(express.json());
 mongoose.connect('mongodb+srv://admin-abhi:admin-abhi@cluster0.dmwil.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true});
 
 //configuration of cross origin
-app.use(cors({
-  origin:"*",
-}));
+app.use(cors());
 
 //routers
 app.use('/',router);
