@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000;
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-
+//database connection
 mongoose.connect('mongodb+srv://admin-abhi:admin-abhi@cluster0.dmwil.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true});
 
 //configuration of cross origin
