@@ -9,8 +9,8 @@ const app=express();
 
 
 //configuring dotenv
-require('dotenv').config();
-const port = process.env.PORT || 5000;
+// require('dotenv').config();
+const port = process.env.PORT || 3000;
 
 //middlewares
 app.use(express.urlencoded({extended:true}));
